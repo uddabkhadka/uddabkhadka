@@ -5,7 +5,7 @@
 }
 
 #menu {
-    background-color: #E8F9FF;
+    background-color: #1D1616;
     width: 100vw;
     height: 35px;
     line-height: 35px;
@@ -13,7 +13,13 @@
     top: 0;
     z-index: 1000;
 }
-
+.nav-myname {
+    color: white;
+    display: inline-block;
+    position: fixed;
+    left: 8vw;
+    letter-spacing: 6vw;
+}
 #menu-toggle {
     margin-left: 10px;
 }
@@ -27,6 +33,8 @@
     border-radius: 50%;
     transform: translateX(50%);
     padding: 9px 5px 5px 5px;
+    object-fit: cover;
+    object-position: top;
 }
 
 #menu-list {
@@ -87,22 +95,23 @@
 
 /* image slider */
 .background-color {
-    height: 100vh;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #23E3c9;
+    background-color: #123458;
+    border-bottom: 10px solid black;
 }
 
 .slider {
-    width: 100vw;
-    height: 100vh;
+    width: 800px;
+    height: 500px;
     overflow: hidden;
 }
 
 .slides {
-    width: 100vw;
-    height: 100vh;
+    width: 500%;
+    height: 500px;
     display: flex;
 }
 
@@ -111,23 +120,24 @@
 }
 
 .slide {
-    width: 100vw;
-    transition: 2.30s;
+    width: 20%;
+    transition: 2s;
 
 }
 
 .slide img {
-    width: 100vw;
-    height: 100vh;
+    width: 800px;
+    height: 500px;
     object-fit: cover;
+    background-repeat: no-repeat;
     /* object-position: top right; */
 }
 
 /* css for manual button */
 .navigation-manual {
     position: absolute;
-    width: 100vw;
-    margin-top: -50px;
+    width: 800px;
+    margin-top: -40px;
     display: flex;
     justify-content: center;
 }
@@ -153,11 +163,11 @@
 }
 
 #radio2:checked~.first {
-    margin-left: -100%;
+    margin-left: -20%;
 }
 
 #radio3:checked~.first {
-    margin-left: -200%;
+    margin-left: -40%;
 }
 
 @media only screen and (max-width: 799px) {
@@ -171,7 +181,7 @@
     position: absolute;
     display: flex;
     display: none;
-    width: 100vw;
+    width: 800px;
     justify-content: center;
     margin-top: 460px;
 }
@@ -199,11 +209,142 @@
     background: #40D3DC;
 }
 
+@media only screen and (max-width: 900px) {
+    .slide img {
+        height: 600px;
+    }
+}
+
 @media only screen and (max-width: 799px) {
     .navigation-auto {
         width: 100vw;
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .background-color {
+        height: 600px;
+        /* height: 100vh; */
+    }
+
+    .slider {
+        width: 100vw;
+        height: 600px;
+        /* height: 100vh; */
+        overflow: hidden;
+    }
+
+    .slides {
+        width: 100vw;
+        height: 600px;
+        /* height: 100vh; */
+        display: flex;
+    }
+
+    .slide {
+        width: 100vw;
+    }
+
+    .slide img {
+        width: 100vw;
+        height: 600px;
+        /* height: 100vh; */
+    }
+
+    /* css for manual button */
+    .navigation-manual {
+        width: 100vw;
+    }
+
+    #radio2:checked~.first {
+        margin-left: -100%;
+    }
+
+    #radio3:checked~.first {
+        margin-left: -200%;
+    }
+
+    /* css for automatic */
+    .navigation-auto {
+        width: 100vw;
+    }
+    .nav-myname {
+        left: 10vw;
+        letter-spacing: 5.2vw;
+    }
+}
+
+/* hero img */
+.hero-img {
+    background-color: yellow;
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid black;
+}
+
+.hero-img img {
+    height: 500px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.video {
+    height: 700px;
+    width: 100vw;
+    background-color: black;
+}
+
+.video video {
+    height: 700px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+    .video {
+        height: 200px;
+    }
+
+    .video video {
+        height: 200px;
+    }
+
+    .hero-img img {
+        background-color: yellow;
+        height: 300px;
+    }
+
+    .hero-img {
+        background-color: yellow;
+        height: 300px;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .nav-myname {
+        left: 15vw;
+        letter-spacing: 4vw;
+    }
+    
+}
+@media only screen and (max-width: 460px) {
+    .nav-myname {
+        left: 17vw;
+        letter-spacing: 3.6vw;
+    }
+    
+}
+@media only screen and (max-width: 384px) {
+    .nav-myname {
+        left: 19vw;
+        letter-spacing: 3vw;
+    }
+    
+}
+
 .about-me {
     display: flex;
     justify-content: center;
@@ -211,6 +352,7 @@
     background-color: #40D3DC;
     color: black;
 }
+
 .contact-me {
     display: flex;
     justify-content: center;
